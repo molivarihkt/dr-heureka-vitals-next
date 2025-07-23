@@ -1,0 +1,19 @@
+.vital-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40px;
+}
+
+.vital-icon-image {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 5px;
+}
+
+.vital-icon-unit {
+    font-size: 10px;
+    color: var(--text-secondary);
+    background: none;
+    padding: 0;
+}

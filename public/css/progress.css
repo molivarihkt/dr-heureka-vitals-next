@@ -1,0 +1,326 @@
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #212121;
+    color: var(--text);
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000000;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .header button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  .back-button:before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    transform: rotate(-45deg);
+  }
+  
+  .placeholder-button {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .logo {
+    text-align: center;
+  }
+  
+  .logo span {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+  }
+  
+  .tagline {
+    font-size: 14px;
+    color: var(--primary-light);
+    margin-top: -5px;
+  }
+  
+  main {
+    padding-bottom: 50px;
+  }
+  
+  .form-group {
+    margin-bottom: 25px;
+  }
+  
+  label {
+    display: block;
+    font-size: 18px;
+    color: var(--text);
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--input-bg);
+    color: var(--text);
+    font-size: 18px;
+    transition: all 0.3s ease;
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--primary);
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-group input {
+    border-radius: 8px 0 0 8px;
+  }
+  
+  .unit {
+    background-color: var(--unit-bg);
+    padding: 12px 15px;
+    border-radius: 0 8px 8px 0;
+    color: var(--text-secondary);
+    font-size: 18px;
+    min-width: 70px;
+    text-align: center;
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .option {
+    position: relative;
+  }
+  
+  .form-check-input {
+    position: absolute;
+    opacity: 0;
+  }
+  
+  .option label {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: var(--surface);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0;
+    font-size: 16px;
+    color: var(--text);
+  }
+  
+  .option input:checked + label {
+    background-color: var(--surface-light);
+  }
+  
+  .checkbox-circle {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--checkbox-unchecked);
+    margin-right: 12px;
+    position: relative;
+    border: 2px solid white;
+  }
+  
+  .option input:checked + label .checkbox-circle {
+    background-color: var(--checkbox-checked);
+    border: 2px solid rgb(207, 230, 207);
+  }
+  
+  .blood-pressure .subtext {
+    display: block;
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-left: 32px;
+  }
+
+  /* Camera and scanning styles */
+  .camera-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  #live_canvas {
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    max-width: 100%;
+  }
+  
+  .camera-overlay {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .progress-container {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    z-index: 10;
+  }
+  
+  .scanning-status {
+    position: absolute;
+    bottom: 85px;
+    width: 80%;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text);
+    text-align: center;
+  }
+  
+  .scan-hint {
+    position: absolute;
+    bottom: 15px;
+    width: 80%;
+    font-size: 14px;
+    color: var(--text);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  /* Vitals grid */
+  .vitals-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .vital-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .vital-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .vital-content {
+    display: flex;
+    padding: 15px;
+    align-items: center;
+  }
+  
+  .vital-label {
+    flex: 1;
+    font-size: 14px;
+    color: var(--text);
+  }
+  
+  .vital-value {
+    flex: 1;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--text);
+  }
+  
+  .vital-value p:nth-child(2) {
+    margin-top: -10px;
+  }
+  
+  .vital-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40px;
+  }
+  
+  .vital-icon img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 5px;
+  }
+  
+  .vital-icon .unit {
+    font-size: 10px;
+    color: var(--text-secondary);
+    background: none;
+    padding: 0;
+  }
+  
+  .text-success {
+    color: var(--success) !important;
+  }
+  
+  @media (min-width: 768px) {
+    .vitals-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }
+  
+  @media (min-width: 1200px) {
+    .vitals-grid {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }

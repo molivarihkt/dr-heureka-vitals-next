@@ -1,0 +1,43 @@
+/* Theme Configuration - Easily customizable theme variables */
+
+/* Default Dark Theme */
+:root {
+  /* Primary Brand Colors */
+  --primary: #2525b1;
+  --primary-light: #4545d1;
+  --primary-dark: #1a1a8c;
+  
+  /* Background Colors */
+  --background: #121212;
+  --surface: #1e1e1e;
+  --surface-light: #2d2d2d;
+  --card-bg: #2d2d2d;
+  
+  /* Text Colors */
+  --text: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --foreground: #ededed;
+  
+  /* Accent & Status Colors */
+  --accent: #ff5252;
+  --success: #25B18E;
+  --warning: #ff9800;
+  --error: #f44336;
+  
+  /* Interactive Elements */
+  --input-bg: rgba(255, 255, 255, 0.08);
+  --unit-bg: rgba(255, 255, 255, 0.05);
+  --checkbox-unchecked: rgb(186, 184, 243);
+  --checkbox-checked: #2525b1;
+  
+  /* Page-specific Variables */
+  --gray-rgb: 255, 255, 255;
+  --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
+  --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
+  --button-primary-hover: #ccc;
+  --button-secondary-hover: #1a1a1a;
+  
+  /* Font Variables */
+  --font-geist-sans: var(--font-geist-sans);
+  --font-geist-mono: var(--font-geist-mono);
+}
